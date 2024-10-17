@@ -43,9 +43,9 @@ const num2 = customizeArray(8, 23);
 
 function combineArrays(arr1, arr2) {
     let tmp = arr1;
-    for(let i = 0; i < arr2.length; i++) {
-        if (!tmp.includes(arr2[i])) {
-            tmp.push(arr2[i]);
+    for(i of arr2) {
+        if (!tmp.includes(i)) {
+            tmp.push(i);
         }
     }
     let product = tmp.sort((a, b) => a - b);
@@ -58,7 +58,7 @@ console.log(taskB);
 /* -----------------------------------------------------------------------------
     Task: C
     Following you will find an alphabet a encrypted text and a shift value. 
-    The message is encrypted using a cesar cipher https://en.wikipedia.org/wiki/Caesar_cipher 
+    The message is encrypted using a caesar cipher https://en.wikipedia.org/wiki/Caesar_cipher 
     Create a function that 
     - Takes three parameters message, alphabet and shift 
     - Creates the key based on the alphabet and the shift value. 
@@ -74,7 +74,23 @@ const ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 const message = "ckrr jutk"
 let shift = 6
 
+function decryptCaesarCipher(message, alphabet, shift) {
+    let product = "";
+    let key = alphabet.slice(shift) + alphabet.slice(0, shift);
 
+    for(letter of message) {
+        const i = key.indexOf(letter);
+        if (i !== -1) {
+            product += alphabet[i];
+        } else {
+            product += letter;
+        }
+    }
+    return product;
+}
+
+const taskC = decryptCaesarCipher(message, ALPHABET, 6);
+console.log(taskC);
 
 /* -----------------------------------------------------------------------------
     Task: D
@@ -87,7 +103,6 @@ let shift = 6
     [3,2,6,9]
     target 9
     -> [3,6]
-
 */
 
 console.log("");
