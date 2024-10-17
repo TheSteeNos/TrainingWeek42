@@ -38,8 +38,8 @@ console.log("");
 console.log("Task: B");
 console.log("");
 
-const num1 = customizeArray(5, 11);
-const num2 = customizeArray(8, 23);
+const array1 = customizeArray(5, 11);
+const array2 = customizeArray(8, 23);
 
 function combineArrays(arr1, arr2) {
     let tmp = arr1;
@@ -52,7 +52,7 @@ function combineArrays(arr1, arr2) {
     return product;
 }
 
-let taskB = combineArrays(num1, num2);
+let taskB = combineArrays(array1, array2);
 console.log(taskB);
 
 /* -----------------------------------------------------------------------------
@@ -113,10 +113,10 @@ const numbers = [1, 23, 14, 56, 42, 33, 0, 3];
 const target = 36;
 
 function findSumAlternative(list, target) {
-    for (number of list) {
-        for (index in list) {
-            if (number + list[index] == target) {
-                return "You can sum " + number + " with " + list[index] + " to get " + target + "!";
+    for (num1 of list) {
+        for (num2 of list) {
+            if (num1 + num2 == target) {
+                return "You can sum " + num1 + " with " + num2 + " to get " + target + "!";
             }
         }
     }
