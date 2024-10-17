@@ -111,3 +111,16 @@ console.log("");
 console.log("Task: E");
 console.log("");
 
+function countDigits(number) {
+    let product = String(number);
+    return product.length; 
+}
+
+const taskC1 = countDigits(123);
+const taskC2 = countDigits(3);
+const taskC3 = countDigits(42693);
+
+console.log(taskC1);
+console.log(taskC2);
+console.log(taskC3);
+console.log("");
