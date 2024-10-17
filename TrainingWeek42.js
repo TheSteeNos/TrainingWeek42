@@ -112,7 +112,19 @@ console.log("");
 const numbers = [1, 23, 14, 56, 42, 33, 0, 3];
 const target = 36;
 
+function findSumAlternative(list, target) {
+    for (number of list) {
+        for (index in list) {
+            if (number + list[index] == target) {
+                return "You can sum " + number + " with " + list[index] + " to get " + target + "!";
+            }
+        }
+    }
+    return "There is no possible sum combo!"
+}
 
+let taskD = findSumAlternative(numbers, target);
+console.log(taskD);
 
 /* -----------------------------------------------------------------------------
     Task: E
