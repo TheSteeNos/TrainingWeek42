@@ -18,7 +18,8 @@ function customizeArray(n, m) {
     }
     return product;
 }
-let taskA = customizeArray(5, 10);
+
+const taskA = customizeArray(5, 10);
 console.log(taskA)
 
 
@@ -37,12 +38,27 @@ console.log("");
 console.log("Task: B");
 console.log("");
 
+const num1 = customizeArray(5, 11);
+const num2 = customizeArray(8, 23);
 
+function combineArrays(arr1, arr2) {
+    let tmp = arr1;
+    for(let i = 0; i < arr2.length; i++) {
+        if (!tmp.includes(arr2[i])) {
+            tmp.push(arr2[i]);
+        }
+    }
+    let product = tmp.sort((a, b) => a - b);
+    return product;
+}
+
+let taskB = combineArrays(num1, num2);
+console.log(taskB);
 
 /* -----------------------------------------------------------------------------
     Task: C
     Following you will find an alphabet a encrypted text and a shift value. 
-    The message is encrypted using a cesar chipher https://en.wikipedia.org/wiki/Caesar_cipher 
+    The message is encrypted using a cesar cipher https://en.wikipedia.org/wiki/Caesar_cipher 
     Create a function that 
     - Takes three parameters message, alphabet and shift 
     - Creates the key based on the alphabet and the shift value. 
@@ -85,7 +101,7 @@ const target = 36;
 
 /* -----------------------------------------------------------------------------
     Task: E
-    Create a function that takes a number as inputt and returns the number of digits in that number. 
+    Create a function that takes a number as input and returns the number of digits in that number. 
     123 -> 3
     2 -> 1
     42693 -> 5
