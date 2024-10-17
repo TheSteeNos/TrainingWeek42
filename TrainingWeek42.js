@@ -1,33 +1,27 @@
-/*
-    Hi.
-    This is a set of practice exercises.
-    The purpose is to focus on a few things at a time.
-    You do this by writing your answer after a task is given (see the example).
-
-    DO NOT change any code that is provided unless the task specifically says so.
-*/
-
-/* -----------------------------------------------------------------------------
-    Task: Example
-    Write the code to print all the names in the list, one name per line
-*/
-console.log("Task: Example");
-const people = ["Tony", "Christian", "Håkon"]
-
-for (let index = 0; index < people.length; index++) {
-    let person = people[index];
-    console.log(person);
-}
-
 /* -----------------------------------------------------------------------------
     Task: A
     Create a function that returns an array of length m-n, 
     n is the min value. 
     m is the max value. 
-    if n = 5 and m is 10 the returned array sholuld be [5,6,7,8,9]
-    Use loops and arrays to achive the goal. 
+    if n = 5 and m is 10 the returned array should be [5,6,7,8,9]
+    Use loops and arrays to achieve the goal. 
 */
+
+console.log("");
 console.log("Task: A");
+console.log("");
+
+function customizeArray(n, m) {
+    let product = [];
+    for (let i = n; i < m; i++) {
+        product.push(i);
+    }
+    return product;
+}
+let taskA = customizeArray(5, 10);
+console.log(taskA)
+
+
 
 /* -----------------------------------------------------------------------------
     Task: B
@@ -38,7 +32,10 @@ console.log("Task: A");
     Create a function that combines the two arrays into one, but no duplicate values. 
     Use for loops
 */
+
+console.log("");
 console.log("Task: B");
+console.log("");
 
 
 
@@ -52,10 +49,16 @@ console.log("Task: B");
     - decrypts and returns the message.
     Use arrays and for loops. 
 */
+
+console.log("");
 console.log("Task: C");
+console.log("");
+
 const ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 const message = "ckrr jutk"
 let shift = 6
+
+
 
 /* -----------------------------------------------------------------------------
     Task: D
@@ -70,11 +73,13 @@ let shift = 6
     -> [3,6]
 
 */
+
+console.log("");
 console.log("Task: D");
+console.log("");
 
 const numbers = [1, 23, 14, 56, 42, 33, 0, 3];
 const target = 36;
-
 
 
 
@@ -85,4 +90,8 @@ const target = 36;
     2 -> 1
     42693 -> 5
 */
+
+console.log("");
 console.log("Task: E");
+console.log("");
+
